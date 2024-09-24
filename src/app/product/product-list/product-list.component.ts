@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProductos } from '../productos';
 
 @Component({
   selector: 'app-product-list',
@@ -9,12 +10,13 @@ export class ProductListComponent {
   imagenWidth:number=50;
   imagenMargin:number=2;
   muestraImg:boolean=true;
+  listFilter:string="";
 
   mostrarImagen():void{
     this.muestraImg=!this.muestraImg
   }
 
- Productos:any[]=[{
+ Productos:IProductos[]=[{
   "ProductoId":1,
   "Modelo":"Sentra",
   "Descripcion":"2 Puertas",
@@ -29,7 +31,7 @@ export class ProductListComponent {
   "Modelo":"Sentra",
   "Descripcion":"4 Puertas",
   "Year":"marzo 12 2021",
-  "Precio": 120000,
+  "Precio": 9,
   "Color":"Blanco",
   "Marca":"temu",
   "ImagenUrl":"https://www.elsoldeleon.com.mx/local/wrfub9-coches-5.jpg/ALTERNATES/LANDSCAPE_1140/COCHES%20(5).JPG"
